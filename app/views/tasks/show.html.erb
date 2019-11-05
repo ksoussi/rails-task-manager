@@ -1,0 +1,9 @@
+<h1><%= @task.title %></h1>
+
+<h3><%= @task.details %></h3>
+
+<% cmptext = "" %>
+<% @task.completed == true ? cmptext = "This task was completed!" : cmptext = "This task was not completed." %>
+<h5 class="bg bg-light"><%= cmptext %></h5>
+<button type="button" class="btn btn-primary"><%= link_to "Edit this task", edit_path %></button>
+<p><%= link_to "Back to list", tasks_path %></p>
